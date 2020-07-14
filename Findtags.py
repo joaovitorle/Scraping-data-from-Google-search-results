@@ -3,9 +3,20 @@ num_pages = 1
 lang = 'pt'
 area = 'com'
 
-search_results = google.search('Doações coronavírus em São Bernardo do Campo', num_pages, lang, area)
+pesquisa= input('O que você deseja pesquisar: ')
+
+search_results = google.search(pesquisa, num_pages, lang, area)
 
 for results in search_results:
-    print(results.description)
-    print(results.link)
+
+    analise= 'Antony' in results
+    if analise == True:
+        print(results.description+1)
+        print(results.link+1)
+
+    else:
+        print(results.description)
+        print(results.link)
+
+
 
